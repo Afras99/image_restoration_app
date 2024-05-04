@@ -95,16 +95,31 @@ python inference_realesrgan.py -n RealESRGAN_x4plus -i inputs --outscale 3.5 --f
 
 ## Running the Application
 
+To run the application in the terminal, follow these steps:
+### Navigate to the `image_restoration` Folder:
+
+```bash
+cd image_imagerestoration
+```
+Run the application with the specified command:
+
+```bash
+
+python run.py --input_folder test_images --output_folder output --GPU 0 --with_scratch --HR
+```
+This command assumes that you have a test_images folder containing input images in the image_imagerestoration directory. It will process these images using the specified parameters (--GPU 0, --with_scratch, --HR) and save the output images to the output folder within the same directory.
+
+To run the web app
 ### 1. Go Back to the Root Directory
 
 ```bash
-cd ../../
+cd ../
 ```
 
 ### 2. Install Necessary Flask Libraries
 
 ```bash
-pip install flask
+pip install bcrypt Flask flask-login Werkzeug
 ```
 
 ### 3. Run the Application
@@ -113,7 +128,6 @@ pip install flask
 flask run
 ```
 
-Make sure to replace `upload`, `inputs`, and `output` with the appropriate file/folder paths for your use case.
 
 ## Environment Setup
 
