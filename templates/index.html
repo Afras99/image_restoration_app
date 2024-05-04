@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Old image restoration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link id="favicon-ico" rel="icon" href="./static/favicon.c3e4e1c1e57e.ico" sizes="any">
+  <link id="favicon-svg" rel="icon" href="./static/favicon.78c995b286d3.svg" type="image/svg+xml">
+  <link rel="mask-icon" href="./static/safari-pinned-tab.4c32b8e091a9.svg" color="#FFFFFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="./static/apple-touch-icon.1adc51db122a.png">
+  <link rel="stylesheet" href="../static/dist/index.72c913ce11b4.css">
+  
+</head>
+
+<body class="font-sans overflow-y-scroll antialiased flex min-h-screen flex-col">
+  <header  class="bg-white lg:bg-white/90 lg:sticky top-0 z-10 p-6 lg:mb-6 lg:filter lg:backdrop-blur"
+    id="app-header">
+    <div class="flex items-center justify-between gap-6">
+      <div class="flex items-center gap-4 flex-shrink">
+        
+      </div>
+      <div class="flex-shrink-0">
+        <div class="hidden lg:block">
+          <nav class="flex justify-end items-start">
+            <div class="flex flex-wrap">
+              <!-- Add these links in your navigation menu -->
+              <!-- <a href="{{ url_for('login') }}" class="nav-link">Login</a>
+              <a href="{{ url_for('signup') }}" class="nav-link-primary">Sign Up</a> -->
+
+              {% if current_user.is_authenticated %}
+                <a href="{{ url_for('logout') }}" class="nav-link-primary">Logout</a>
+              {% endif %}
+              <!-- <a href="/changelog" class="nav-link ">Changelog</a> -->
+              <!-- <a href="/signin?next=/microsoft/bringing-old-photos-back-to-life" class="nav-link">Sign&nbsp;in</a>
+              <a href="/docs" class="nav-link-primary">Sign&nbsp;Up</a> -->
+            </div>
+          </nav>
+        </div>
+      </div> 
+    </div>
+  </header>
+  
+  <main class="layout-main flex-1">
+    <header class="flex flex-col md:flex-row md:items-center gap-lh pb-6"
+      aria-label="Old Image restoration">
+      <hgroup class="flex-grow flex flex-col">
+        <div class="flex flex-col md:flex-row md:items-center gap-2 md:gap-3">
+          <h3 translate="no">old Image Restoration</h3>
+        </div>
+      </hgroup>  
+    </header>
+    <div class="breakout-layout-main border-b border-r8-gray-6">
+      <div class="layout-main">
+        <div class="r8-tabs r8-tabs--bordered r8-tabs--md top-px relative flex-wrap">
+          <a href="/microsoft/bringing-old-photos-back-to-life
+                     " aria-selected="true" class="r8-tabs__tab no-underline">
+            <span class="r8-tabs__start-icon">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+            </span>
+            <span>Playground</span>
+          </a>
+          <a class="r8-tabs__tab no-underline">
+            <span class="r8-tabs__start-icon">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <polyline points="11 3 11 11 14 8 17 11 17 3"></polyline>
+              </svg>
+            </span>
+            <span>Examples</span>
+          </a>
+          <a  class="r8-tabs__tab no-underline">
+            <span class="r8-tabs__start-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                <path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <line x1="10" y1="9" x2="8" y2="9"></line>
+              </svg>
+            </span>
+            <span>README</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="model-content-onboarding">
+    </div>
+    <div class="model-content mt-lh">
+      <div class="mb-2lh">
+        
+        <div data-react-placeholder="APIPlayground">
+          <div class="input-output-grid">
+            <div class="flex flex-col md:flex-row">
+              <div class="input-col relative md:flex-1 pb-4 min-w-0">
+                <div class="mb-2 flex items-center justify-between">
+                  <div class="flex-1">
+                    <h2 class="!my-0 text-r8-2xl">Input</h2>
+                  </div>
+                </div>
+                <div id=":r24:" data-open="true" role="tabpanel" aria-labelledby="form" class="r8-tabs__content py-4" data-enter="true">
+                  <div>
+                    <a data-testid="value-image-url-image" href="https://replicate.delivery/mgxm/7869b8fd-2393-450b-8fd0-281f00eedef9/a.png" rel="noreferrer" target="\_blank" class="inline-flex flex-col">
+                      <img data-testid="value-image-image" src="https://replicate.delivery/mgxm/7869b8fd-2393-450b-8fd0-281f00eedef9/a.png" alt="image" class="max-w-full">
+                    </a>
+                  </div>
+                  <form data-testid="input-form" id="input-form" method="post" enctype="multipart/form-data">
+                    <div class="mb-3" data-testid="initial-file-input">
+                        <div>
+                            <a data-testid="value-image-url-image" href="#" rel="noreferrer" target="_blank" class="inline-flex flex-col">
+                                <img data-testid="value-image-image" src="" alt="image" class="max-w-full">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="py-2.5" data-type="string" data-name="image">
+                        <div class="flex flex-col gap-2 group" data-disabled="false">
+                            <div class="flex items-center">
+                                <div class="flex items-center">
+                                    <label class="text-r8-base font-mono" for="image">
+                                        <div class="flex items-center gap-1.5" translate="no">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 256 256" aria-hidden="true">
+                                                <path d="M213.66,82.34l-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V88A8,8,0,0,0,213.66,82.34ZM160,51.31,188.69,80H160ZM200,216H56V40h88V88a8,8,0,0,0,8,8h48V216Z"></path>
+                                            </svg>
+                                            image
+                                        </div>
+                                    </label>
+                                    <span class="text-r8-red-10">*</span>
+                                    <span class="ml-1.5 font-sans text-r8-sm text-r8-gray-10">file</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <div role="presentation" tabindex="0" class="bg-r8-gray-2 p-4 border border-r8-gray-7 border-dashed hover:border-r8-gray-9 cursor-pointer group-data-[disabled=true]:cursor-not-allowed group-data-[disabled=true]:hover:border-r8-gray-7" onclick="document.getElementById('image').click()">
+                                    <input type="file" style="display: none;" tabindex="-1" id="image" name="image" required>
+                                    <p class="text-r8-sm text-r8-gray-11 flex items-center gap-2 select-none">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256" aria-hidden="true">
+                                            <path d="M213.66,82.34l-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V88A8,8,0,0,0,213.66,82.34ZM160,51.31,188.69,80H160ZM200,216H56V40h88V88a8,8,0,0,0,8,8h48V216Zm-40-64a8,8,0,0,1-8,8H136v16a8,8,0,0,1-16,0V160H104a8,8,0,0,1,0-16h16V128a8,8,0,0,1,16,0v16h16A8,8,0,0,1,160,152Z"></path>
+                                        </svg>
+                                        Drop a file or click to upload
+                                    </p>
+                                    <div data-testid="simple-preview" class="flex items-center mt-1 overflow-hidden">
+                                        <div class="truncate min-w-0">
+                                            <p class="text-r8-sm text-r8-gray-11 truncate"></p>
+                                        </div>
+                                        <div class="flex-shrink-0 ml-2">
+                                            <button class="w-6 h-6 rounded-full hover:bg-r8-gray-6 flex items-center justify-center" type="button" onclick="resetFileInput()">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256">
+                                                    <path d="M216,48H176V40a24,24,0,0,0-24-24H104A24,24,0,0,0,80,40v8H40a8,8,0,0,0,0,16h8V208a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V64h8a8,8,0,0,0,0-16ZM96,40a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96Zm96,168H64V64H192ZM112,104v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm48,0v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Z"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-2 space-y-1">
+                            <p class="text-r8-sm text-r8-gray-12">input image.</p>
+                        </div>
+                    </div>
+                    <div class="py-2.5" data-type="boolean" data-name="HR">
+                        <div class="gap-2 flex items-center">
+                            <input id="HR" type="checkbox" class="disabled:cursor-not-allowed disabled:opacity-50" name="HR">
+                            <div class="flex items-center">
+                                <label class="text-r8-base font-mono" for="HR">
+                                    <div class="flex items-center gap-1.5" translate="no">HR</div>
+                                </label>
+                                <span class="ml-1.5 font-sans text-r8-sm text-r8-gray-10">boolean</span>
+                            </div>
+                        </div>
+                        <div class="mt-2 space-y-1">
+                            <p class="text-r8-sm text-r8-gray-12">whether the input image is high-resolution</p>
+                        </div>
+                    </div>
+                    <div class="py-2.5" data-type="boolean" data-name="with_scratch">
+                        <div class="gap-2 flex items-center">
+                            <input id="with_scratch" type="checkbox" class="disabled:cursor-not-allowed disabled:opacity-50" name="with_scratch">
+                            <div class="flex items-center">
+                                <label class="text-r8-base font-mono" for="with_scratch">
+                                    <div class="flex items-center gap-1.5" translate="no">with_scratch</div>
+                                </label>
+                                <span class="ml-1.5 font-sans text-r8-sm text-r8-gray-10">boolean</span>
+                            </div>
+                        </div>
+                        <div class="mt-2 space-y-1">
+                          <p class="text-r8-sm text-r8-gray-12">whether the input image is scratched </p>
+                      </div>
+                      <div class="sticky bottom-0 bg-white">
+                        <div class="flex items-center justify-end gap-2 py-4 border-t border-r8-gray-6">
+                            <button type="button" class="r8-btn r8-btn--outlined r8-btn--primary r8-btn--md" onclick="resetForm()">
+                                <span>Reset</span>
+                            </button>
+                            <button type="submit" form="input-form" class="r8-btn r8-btn--filled r8-btn--primary r8-btn--md">
+                                <span>Run</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- <div class="sticky bottom-0 bg-white">
+
+                  <div class="flex items-center justify-end gap-2 py-4 border-t border-r8-gray-6"><button type="button"
+                      class="r8-btn r8-btn--outlined r8-btn--primary r8-btn--md"><span>Reset</span></button><button type="submit" value="Restore"
+                      form="input-form" class="r8-btn r8-btn--filled r8-btn--primary r8-btn--md"><span>Run</span></button></div>
+                </div> -->
+              </div>
+              </div>
+              <div class="input-output-grid--divider flex-shrink-0 md:mx-6 mb-6 md:my-0" role="separator">
+                <div class="bg-r8-gray-6 md:w-px md:h-full h-px w-full"></div>
+              </div>
+              <div class="output-col md:flex-1 pb-4 min-w-0">
+                  <div class="output-col md:flex-1 pb-4 min-w-0">
+                    <div class="flex flex-col h-full">
+                        <div class="mb-2">
+                            <div class="flex items-center gap-2">
+                                <h2 class="!my-0 text-r8-2xl">Output</h2>
+                            </div>
+                        </div>
+                        <div class="flex-grow">
+                          <div class="loading-spinner hidden animate-pulse" id="loadingSpinner">
+                            loading ....
+                            <div class="h-8 bg-r8-gray-4 animate-pulse mb-6"></div>
+                            <div class="aspect-square bg-r8-gray-4 animate-pulse"></div>
+                          </div>
+                            <img src="https://replicate.delivery/mgxm/18b02ad9-ae81-4044-800e-65732df6bdc7/out.png"
+                                 alt="Output image" class="max-w-full max-h-full object-contain">
+                        </div>
+                        <div class="gap-2 flex flex-wrap mt-4">
+                          <a class="r8-btn r8-btn--outlined r8-btn--primary r8-btn--md" id="downloadBtn" href="#" download>
+                            <span class="r8-btn__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256">
+                                    <path d="M240,136v64a16,16,0,0,1-16,16H32a16,16,0,0,1-16-16V136a16,16,0,0,1,16-16H72a8,8,0,0,1,0,16H32v64H224V136H184a8,8,0,0,1,0-16h40A16,16,0,0,1,240,136Zm-117.66-2.34a8,8,0,0,0,11.32,0l48-48a8,8,0,0,0-11.32-11.32L136,108.69V24a8,8,0,0,0-16,0v84.69L85.66,74.34A8,8,0,0,0,74.34,85.66ZM200,168a12,12,0,1,0-12,12A12,12,0,0,0,200,168Z"></path>
+                                </svg>
+                            </span>
+                            <span>Download</span>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div id="performance" class="mb-2lh">
+        <h4 class="mb-lh pb-2 border-b border-hairline">Run time and cost</h4>
+        <p class="mb-lh">
+          This model runs on Nvidia T4 GPU hardware.
+          Predictions typically complete within 3 minutes.
+          The predict time for this model varies significantly based on the inputs.
+        </p>
+      </div> -->
+      
+    </div>
+  </main>
+  <script>
+    // const form = document.getElementById('input-form');
+    // const fileInput = document.getElementById('image');
+    // const hrCheckbox = document.getElementById('HR');
+    // const withScratchCheckbox = document.getElementById('with_scratch');
+
+    const fileInput = document.getElementById('image');
+const imagePreviewElement = document.querySelector('[data-testid="value-image-image"]');
+const imageDisplayElement = document.querySelector('[data-testid="value-image-url-image"]');
+
+fileInput.addEventListener('input', (event) => {
+  const file = event.target.files[0];
+
+  if (file) {
+    const imageUrl = URL.createObjectURL(file);
+
+    if (imagePreviewElement && imageDisplayElement) {
+      imagePreviewElement.src = imageUrl;
+      imageDisplayElement.href = imageUrl;
+
+      imagePreviewElement.style.display = 'block';
+      imageDisplayElement.style.display = 'inline-flex';
+    }
+  } else {
+    if (imagePreviewElement && imageDisplayElement) {
+      imagePreviewElement.src = '';
+      imageDisplayElement.href = '';
+
+      imagePreviewElement.style.display = 'none';
+      imageDisplayElement.style.display = 'none';
+    }
+  }
+});
+
+    // form.addEventListener('submit', (event) => {
+    //     event.preventDefault(); 
+
+    //     const formData = new FormData(form);
+
+    //     fetch('/', {
+    //         method: 'POST',
+    //         body: formData,
+    //     })
+    //     .then(response => response.json())
+    //     .then(data => {
+    //         const { originalImagePath, restoredImagePath } = data;
+    //         // Update image elements
+    //     })
+    //     .catch(error => {
+    //         console.error('Error:', error);
+    //     });
+    // });
+    const resetButton = document.querySelector('.r8-btn--outlined.r8-btn--primary');
+    const form = document.getElementById('input-form');
+    // const imagePreviewElement = document.querySelector('[data-testid="value-image-image"]');
+    // const imageDisplayElement = document.querySelector('[data-testid="value-image-url-image"]');
+
+resetButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    form.reset();
+
+    const outputImageElement = document.querySelector('[alt="Output image"]');
+    if (outputImageElement) {
+        outputImageElement.src = '';
+    }
+
+    if (imagePreviewElement && imageDisplayElement) {
+        imagePreviewElement.src = '';
+        imageDisplayElement.href = '';
+        imagePreviewElement.style.display = 'none';
+        imageDisplayElement.style.display = 'none';
+    }
+});
+
+function hideLoadingSpinner() {
+  const loadingSpinner = document.getElementById('loadingSpinner');
+  if (loadingSpinner) { // Check if element exists before modifying
+    loadingSpinner.classList.add('hidden'); // Prefer using classes for visibility
+  }
+}
+
+function showLoadingSpinner() {
+  const loadingSpinner = document.getElementById('loadingSpinner');
+  if (loadingSpinner) {
+    loadingSpinner.classList.remove('hidden');
+  }
+} 
+
+const downloadBtn = document.getElementById('downloadBtn');
+const outputImageElement = document.querySelector('img[alt="Output image"]');
+// const form = document.getElementById('input-form');
+form.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  const outputImageElement = document.querySelector('[alt="Output image"]');
+    if (outputImageElement) {
+        outputImageElement.src = '';
+    }
+  showLoadingSpinner();
+
+  const formData = new FormData(form);
+  const response = await fetch('/image-restoration', {
+    method: 'POST',
+    body: formData
+  });
+
+  if (response.ok) {
+    const { originalImagePath, restoredImagePath } = await response.json();
+
+    // Update the output image source
+    if (outputImageElement) {
+      outputImageElement.src = restoredImagePath;
+    }
+
+    const fileName = restoredImagePath.split('/').pop();
+    downloadBtn.setAttribute('href', restoredImagePath);
+    downloadBtn.setAttribute('download', fileName);
+  } else {
+    const error = await response.text();
+    console.error('Error:', error);
+  }
+
+  // Hide loading spinner after receiving response
+  hideLoadingSpinner();
+});
+
+
+</script>
+
+</body>
+
+</html>
+
+ 
