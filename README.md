@@ -109,7 +109,7 @@ python run.py --input_folder test_images --output_folder output --GPU 0 --with_s
 ```
 This command assumes that you have a test_images folder containing input images in the image_imagerestoration directory. It will process these images using the specified parameters (--GPU 0, --with_scratch, --HR) and save the output images to the output folder within the same directory.
 
-To run the web app
+To run the web app:
 ### 1. Go Back to the Root Directory
 
 ```bash
